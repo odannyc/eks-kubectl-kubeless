@@ -14,5 +14,6 @@ RUN curl -s https://api.github.com/repos/kubernetes-sigs/kustomize/releases/late
   cut -d '"' -f 4 |\
   xargs curl -O -L
 
-RUN mv kustomize_*_${OS}_amd64 kustomize
-RUN chmod u+x kustomize
+RUN mv kustomize_*_${OS}_amd64 kustomize && \
+  chmod u+x kustomize && \
+  mv kustomize /usr/local/bin/
