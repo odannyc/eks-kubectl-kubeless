@@ -1,4 +1,4 @@
-FROM codeship/eks-kubectl
+FROM wheelsllc/eks-kubectl
 
 ARG RELEASE=v1.0.2
 ARG OS=linux
